@@ -1,0 +1,60 @@
+package domain;
+
+import lombok.Getter;
+import lombok.Setter;
+import javax.persistence.*;
+
+@Entity
+@Table
+@Setter
+@Getter
+
+public class Agencia {
+	
+	@Id
+	private Integer id;
+	private String nome;
+	private Integer numero;
+	private String email;
+	
+	public Agencia(Integer id, String nome, Integer numero, String email) {
+		
+		this.id = id;
+		this.nome = nome;
+		this.numero = numero;
+		this.email = email;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public Integer getNumero() {
+		return numero;
+	}
+
+	public void setNumero(Integer numero) {
+		this.numero = numero;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+		
+}
